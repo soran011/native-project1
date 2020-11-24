@@ -13,7 +13,8 @@ function Screen({ children }) {
 
 const styles = StyleSheet.create({
     sreen: {
-        paddingTop: Constants.StatusBarHeight
+        paddingTop: Constants.StatusBarHeight,
+        flex: 1,
     }
 })
 export default Screen;
