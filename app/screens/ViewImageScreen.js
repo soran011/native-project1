@@ -10,7 +10,6 @@ function ViewImageScreen(props) {
       <View style={styles.closeIcon}>
         <MaterialCommunityIcons name="close" color="white" size={35} />
       </View>
-
       <View style={styles.deleteIcon}>
         <MaterialCommunityIcons
           name="trash-can-outline"
@@ -18,17 +17,14 @@ function ViewImageScreen(props) {
           size={35}
         />
       </View>
-
       <Image
         resizeMode="contain"
-        style={styles.Image}
+        style={styles.image}
         source={require("../assets/chair.jpg")}
       />
     </View>
   );
 }
-
-export default ViewImageScreen;
 
 const styles = StyleSheet.create({
   closeIcon: {
@@ -36,19 +32,19 @@ const styles = StyleSheet.create({
     top: 40,
     left: 30,
   },
+  container: {
+    backgroundColor: colors.black,
+    flex: 1,
+  },
   deleteIcon: {
     position: "absolute",
     top: 40,
     right: 30,
   },
-
-  container: {
-    backgroundColor: colors.black,
-    flex: 1,
-  },
-
-  Image: {
+  image: {
     width: "100%",
     height: "100%",
   },
 });
+
+export default ViewImageScreen;

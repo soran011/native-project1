@@ -1,11 +1,10 @@
 import React from "react";
 import { StyleSheet, View, FlatList } from "react-native";
 
-import Screen from "../components/Screen";
-import ListItem from "../components/ListItem";
+import { ListItem, ListItemSeparator } from "../components/lists";
 import colors from "../config/colors";
 import Icon from "../components/Icon";
-import ListItemSeparator from "../components/ListItemSeparator";
+import Screen from "../components/Screen";
 
 const menuItems = [
   {
@@ -24,14 +23,14 @@ const menuItems = [
   },
 ];
 
-function AcountScreen(props) {
+function AccountScreen(props) {
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
         <ListItem
-          title="Ben Adam"
-          subTitle="ben.adam@gmail.com"
-          image={require("../assets/ben.jpg")}
+          title="Mosh Hamedani"
+          subTitle="programmingwithmosh@gmail.com"
+          image={require("../assets/mosh.jpg")}
         />
       </View>
       <View style={styles.container}>
@@ -61,13 +60,12 @@ function AcountScreen(props) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    marginVertical: 20,
-  },
-
   screen: {
     backgroundColor: colors.light,
   },
+  container: {
+    marginVertical: 20,
+  },
 });
 
-export default AcountScreen;
+export default AccountScreen;
